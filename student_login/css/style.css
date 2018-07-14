@@ -1,0 +1,139 @@
+#main-wrapper{
+width:500px;
+margin:0 auto;
+background:white;
+padding:5px;
+border-radius:10px;
+border:2px solid #2980b9;
+font-family:Arial, Helvetica, sans-serif;
+}
+.photo{
+width:150px;
+text-align:center;
+border-radius:50%;
+}
+.myform{
+width:450px;
+margin:0 auto;
+}
+.inputvalues{
+width:430px;
+margin:0 auto;
+padding:5px;
+}
+#login_btn{
+margin-top:10px;
+background-color:#27ae60;
+padding:5px;
+color:white;
+width:100%;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+}
+#register_btn{
+margin-top:10px;
+background-color:#2980b9;
+padding:5px;
+color:white;
+width:100%;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+margin-bottom:10px;
+font-family:Arial, Helvetica, sans-serif;
+}
+#signup_btn{
+margin-top:10px;
+background-color:#2980b9;
+padding:5px;
+color:white;
+width:100%;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+}
+#back_btn{
+margin-top:10px;
+background-color:#e67e22;
+padding:5px;
+color:white;
+width:30%;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+}
+#logout_btn{
+margin-top:10px;
+background-color:#c0392b;
+padding:5px;
+color:white;
+width:100%;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+margin-bottom:20px;
+font-family:Arial, Helvetica, sans-serif;
+}
+.nav_list{
+	width:100%;
+	background:#00316b;
+}
+.nav_body{
+	margin:0;
+	padding:0;
+	font-family:sans-sarif;
+font-family:Arial, Helvetica, sans-serif;
+}
+.nav_ul{
+width:80%;
+margin: 0 auto;
+padding:0;
+}
+.nav_li{
+list-style:none;
+display:inline-block;
+padding:20px;
+}
+.nav_li:hover{
+background:#e91e63;
+}
+.nav_li a{
+color:#fff;
+text-decoration:none;
+}
+.toggle
+{
+width:100%;
+padding:10px 20px;
+background:#001f44;
+text-align:right;
+box-sizing:border-box;
+color:#fff;
+font-size:30px;
+font-family:Arial, Helvetica, sans-serif;
+}
+@media(max-width:768px)
+{
+.toggle
+{
+display:block;
+}
+nav_ul
+{
+width:100%;
+display:none;
+}
+nav_li
+{
+display:block;
+text-align:center;
+}
+.active
+{
+display:block;
+}
+}

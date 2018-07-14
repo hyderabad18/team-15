@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width:divice-width;initial-scale:1;user-scalable:no;" />
+<title>navigation bar</title>
+<link rel="stylesheet"  href="css/style.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAF1NEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body class="nav_body">
+<nav class="nav_list">
+<div class="toggle">
+<i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<ul class="nav_ul">
+<li class="nav_li"><a href="#">HOME</a></li>
+<li class="nav_li"><a href="#">ABOUT</a></li>
+<li class="nav_li"><a href="#">SERVICES</a></li>
+<li class="nav_li"><a href="#">PORTFOLIO</a></li>
+<li class="nav_li"><a href="#">CONTACT</a></li>
+</ul>
+</nav>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+$('.menu').click(function(){
+$('ul').toggleClass('active');
+})
+})
+</script>
+</body>
+</head>
+</html>
