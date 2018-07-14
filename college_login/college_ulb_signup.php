@@ -45,31 +45,36 @@ session_start();
 
  	<div class="form-group">
                   <!--<label for="Username" class="text-uppercase" name="user">User</label>-->
-                  <input type="text" class="form-control" placeholder="Enter the College Name*" name="collegename">
+                  <input type="text" class="form-control" placeholder="Enter the College Name*" name="collegename" required>
                 </div>
 
                 <div class="form-group">
                   <!--<label for="Email" class="text-uppercase" >Email ID</label>-->
-                  <input type="email" class="form-control" placeholder="Enter the College Email ID*" name="collegeemail">
+                  <input type="email" class="form-control" placeholder="Enter the College Email ID*" name="collegeemail" required>
                 </div>
                 <div class="form-group">
                   <!--<label for="GovID" class="text-uppercase" >Government ID</label>-->
                   
-                  <input type="text" class="form-control" placeholder="Enter the College ID*" name="collegeid">
+                  <input type="text" class="form-control" placeholder="Enter the College ID*" name="collegeid" required>
                 </div>
 				<div class="form-group">
                   <!--<label for="Dept" class="text-uppercase" >Department</label>-->
-                  <input type="text" class="form-control" placeholder="College Address*" name="collegeaddress" maxlength="1000">
+                  <input type="text" class="form-control" placeholder="College Address*" name="collegeaddress" maxlength="1000" required>
                 </div>
                 <div class="form-group">
                   <!--<label for="Password1" class="text-uppercase" >Password</label>-->
-                  <input type="password" class="form-control" placeholder="Password*" name="collegepassword">
+                  <input type="password" class="form-control" placeholder="Password*" name="collegepassword" required>
                 </div>
-
-                <div class="form-group">
+				<div class="form-group">
                   <!--<label for="Password2" class="text-uppercase">Confirm Password</label>-->
                   <input type="password" class="form-control" placeholder="Confirm Password*">
-                </div>            
+                </div> 
+				 <div class="form-group">
+                  <!--<label for="Password1" class="text-uppercase" >Password</label>-->
+                  <input type="text" class="form-control" placeholder="Phno" name="phno" required>
+                </div>
+
+                           
                 
                 <div class="form-check">
                   <input type="submit" class="btn btn-login float-right" name="login">

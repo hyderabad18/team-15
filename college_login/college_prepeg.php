@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "MadhuMysql";
-$dbname = "sih_db";
+$password = "";
+$dbname = "youthseva";
 
 // Create connection
 session_start();
@@ -10,40 +10,42 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+else
+{
+	echo "connected";
+}
 
 // prepare and bind
-$inputid=$_POST['uid'];
+/*$inputid=$_POST[''];
 $inputmail=$_POST['email'];
 $sql = "SELECT * FROM uid WHERE uid='$inputid' and ulb_mail ='$inputmail'";
 //$sql="select * from `uid` where `uid`='".$inputid."' and `ulb_mail`='".$inputmail."'";
 $result=mysqli_query($conn,$sql);
-
-if(mysqli_num_rows($result)>0)
+*/
+if($_SERVER["REQUEST_METHOD"] =='POST')
 {
-        $row=mysqli_fetch_assoc($result);
+		echo "enterd";
+	 //  $row=mysqli_fetch_assoc($result);
 
-$stmt = $conn->prepare("INSERT INTO ulb VALUES (?,?, ?,?,?,?,?)");
-    $stmt->bind_param("ssssiss", $fname, $lname,$user,$uid,$password, $mail,$dept);
+$stmt = $conn->prepare("INSERT INTO college_details VALUES (?,?,?,?,?,?)");
+    $stmt->bind_param("ssssss",$cname,$cid,$cemail,$caddr, $cph,$cpass);
     
     // set parameters and execute
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $user=$_POST['user'];
-    $uid=$_POST['uid'];
-    $password=$_POST['password'];
-    $mail = $_POST['email'];
-    $dept=$_POST['dept'];
+    $cname = $_POST['collegename'];
+    $cemail = $_POST['collegeemail'];
+    $cid=$_POST['collegeid'];
+    $cph=$_POST['phno'];
+    $caddr=$_POST['collegeaddress'];
+    $cpass = $_POST['collegepassword'];
+   
     $stmt->execute();
     
     echo $conn->error;
     $stmt->close();
     $_SESSION[]="registered successfully";
-    header("location:ulblogin.php");
+    header("location:college_ulblogin.php");
        
-	} else {
-    $_SESSION["error"]="invalid ulb_id";
-    header("location:ulb_signup.php");
-    }
+	} 
 
     $conn->close();
 ?>
