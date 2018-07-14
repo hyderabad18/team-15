@@ -263,27 +263,12 @@
     </div>
 	
   <script src="https://code.highcharts.com/highcharts.src.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
-var obj = JSON.parse('<?php echo json_encode($myarray) ?>');
 function show_more_menu() {
- $.ajax({
-                type: "GET",
-                url: "linear.php" ,
-                data: { h: "michael" },
-                success : function() { 
-
-                    // here is the code that will run on client side after running clear.php on server
-
-                    // function below reloads current page
-                    location.reload();
-
-                }
-            });
 Highcharts.chart('container', {
 
     title: {
-        text: 'Carrer Growth across the years'
+        text: 'Career Growth across the years'
     },
 
    
@@ -310,7 +295,7 @@ Highcharts.chart('container', {
 
     series: [{
         name: ' ',
-        data: [100, 203, 177, 58, 31, 31,133,175]
+        data: [100, 200, 170, 150, 130, 140, 150, 170]
     }],
 
     responsive: {
