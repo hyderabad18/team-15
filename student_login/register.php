@@ -20,6 +20,14 @@
 <input name="password" type="password" class="inputvalues" placeholder="password" /><br>
 <label><b>Confirm Password:</b></label>
 <input name="cpassword" type="password" class="inputvalues" placeholder="password" /><br>
+<label><b>Sectors</b></label>
+<input type="checkbox" name="sector" value="manufacturing">Manufacturing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="checkbox" name="sector" value="retail">    Retail<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="checkbox" name="sector" value="banking">   Banking<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="checkbox" name="sector" value="bpo">       BPO<br>
 <input name="submit_btn" type="submit" id="signup_btn" value="Sign Up" />
 <br>
 <a href="index1.php"><input type="button" id="back_btn" value="Back" /></a>
