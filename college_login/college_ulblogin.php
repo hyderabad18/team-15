@@ -36,18 +36,18 @@ function googleTranslateElementInit() {
 
         <div class="col-md-4 login-sec">
             <h2 class="text-center">College Login</h2>
-            <form class="login-form" action="UlbLoginProcess.php/cgi-bin/php" method="post">
+            <form class="login-form" action="college_UlbLoginProcess.php" method="post">
 
               <div class="form-group">
                 <span class="text-uppercase" style="color:red;">
                     <?php if(isset($_SESSION['error'])) // IF THE USER ENTER WRONG CREDENTIALS...DISPLAYING THE ERROR MESSAGE
                      echo $_SESSION['error']; ?></span><br/>
-                <label for="UlbUserName" class="text-uppercase">Username</label>
-                <input type="text" class="form-control" placeholder="" value="<?php if(isset($_COOKIE['remember'])){echo $_COOKIE['user'];} ?>" name="name">              
+                <label for="UlbUserName" class="text-uppercase" >email</label>
+                <input type="email" class="form-control" placeholder="" value="<?php if(isset($_COOKIE['remember'])){echo $_COOKIE['user'];} ?>" name="email" required>              
               </div>
               <div class="form-group">
-                <label for="UlbPassword" class="text-uppercase">Password</label>
-                <input type="password" class="form-control" placeholder="" value="<?php if(isset($_COOKIE['remember'])){echo $_COOKIE['pwd'];} ?>" name="pwd">
+                <label for="UlbPassword" class="text-uppercase">password</label>
+                <input type="password" class="form-control" placeholder="" value="<?php if(isset($_COOKIE['remember'])){echo $_COOKIE['pwd'];} ?>" name="password" required>
               </div>            
               
               <div class="form-check">

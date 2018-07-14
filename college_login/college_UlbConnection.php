@@ -5,22 +5,22 @@
 			$this->db=$db;
 		}
 		function getConnection(){
-			$conn=new mysqli("localhost","root","MadhuMysql");
+			$conn=new mysqli("localhost","root","");
 			if($conn->connect_error){
 				header("location:db_error.php");
 			}
 			else{
-				$conn->select_db("sih_db");
+				$conn->select_db("youthseva");
 				return $conn;
 			}
 		}
-		function authenticateUlb($ulb_user){
+		function authenticateUlb($ulb_user,$password){
 			$con=$this->getConnection();
-			$query="select * from `ulb` where `ulb_user`=? and `ulb_password`=?";
+			$query="select * from `college_details` where `email`=? and `password`=?";
 			if($stmt=$con->prepare($query)){
-				$stmt->bind_param("ss",$user,$pwd);
-				$user=$ulb_user->getUlbUser();
-				$pwd=$ulb_user->getUlbPassword();
+				$stmt->bind_param("ss",$email,$password);
+				$email=$ulb_user;
+				$password=$password;
 				$stmt->execute();
 				$result=$stmt->get_result();
 					if($result->num_rows==1){
@@ -37,18 +37,18 @@
 				header("location:error.php");
 			}
 		}
-		function getUid($user){
+	/*	function getUid($email){
 			$con=$this->getConnection();
-			$query="select `uid` from `ulb` where `ulb_user`='".$user->getUlbUser()."'";
+			$query="select `password` from `college_details` where `email`='"$email"'";
 			$result=$con->query($query);
 			if($result->num_rows>0){
 				$id=$result->fetch_assoc();
 			$con->close();	
-				return $id['uid'];
+				return $id['college_id'];
 
 			}
 			else return 0;
-		}
+		}*/
 
 	} 
 ?>
