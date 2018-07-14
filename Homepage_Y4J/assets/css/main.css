@@ -2436,7 +2436,7 @@ input, select, textarea {
 		input[type="radio"]:checked + label:before {
 			background: #ffffff;
 			border-color: #ffffff;
-			color: #b74e91;
+			color: #b74e91; /*hulio*/
 			content: '\f00c';
 		}
 
@@ -2501,7 +2501,7 @@ input, select, textarea {
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: #312450;
+			color: #7864a8; /* hulio2 #312450;*/
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
