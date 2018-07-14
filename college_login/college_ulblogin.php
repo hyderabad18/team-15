@@ -59,7 +59,7 @@ function googleTranslateElementInit() {
                 <div class="g-recaptcha" data-sitekey="6LcOCFAUAAAAADCuPRwOpNB5DyI36vb3-87wkYYx"></div>
                 <button type="submit" class="btn btn-login float-right" name="submit">Login</button>
                 <a class="d-block small" href="forgotPass.html">Forgot Password?</a> 
-                  <a class="d-block small mt-3" href="signUp.html">Register an Account</a>  
+                  <a class="d-block small mt-3" href="college_ulb_signup.php">Register an Account</a>  
               </div>        
             </form>
         </div>

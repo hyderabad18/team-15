@@ -22,7 +22,7 @@
 <input name="cpassword" type="password" class="inputvalues" placeholder="password" /><br>
 <input name="submit_btn" type="submit" id="signup_btn" value="Sign Up" />
 <br>
-<a href="index.php"><input type="button" id="back_btn" value="Back" /></a>
+<a href="index1.php"><input type="button" id="back_btn" value="Back" /></a>
 </form>
 <?php
 if(isset($_POST['submit_btn']))

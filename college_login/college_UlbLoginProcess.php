@@ -32,11 +32,11 @@
     if ($response["success"] == true) {
         // echo '<h3 class="alert alert-success">Login Successful</h3>';
         if(isset($_POST['submit'])){
-		require("./college_UlbUser.php");//importing UlbUser class from  UlbUser.php (MODEL for ULB_USERS)  
+		//require("./college_UlbUser.php");//importing UlbUser class from  UlbUser.php (MODEL for ULB_USERS)  
 		require("./college_UlbConnection.php");//Database actions on ulb table (DAO FOR ULB_USERS ) 
 		$email=$_POST['email'];
 		$pwd=$_POST['password'];
-		$user=new UlbUser;
+	//	$user=new UlbUser;
 		$ulb_dao=new UlbConnection("youthseva");
 		/*$user->setUlbUser($email);
 		$user->setUlbPassword($pwd);*/

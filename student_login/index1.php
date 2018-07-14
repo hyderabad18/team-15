@@ -14,7 +14,7 @@ require 'dbconfig/config.php';
 <h2>Student Login Form</h2>
 <img src="imgs/photo.png" class="photo" />
 </center>
-<form class="myform" action="index.php" method="post">
+<form class="myform" action="index1.php" method="post">
 <label><b>Username:</b></label>
 <input name="username" type="text" class="inputvalues" placeholder="Username" required /><br>
 <label><b>Password:</b></label>
