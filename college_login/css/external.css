@@ -1,0 +1,29 @@
+.panel-body
+{
+	text-align:center;
+}
+h3
+{
+	color:#0066ff;
+}
+.navbar{
+    background-color: #0066ff;
+}
+
+.nav-link{
+  color: #ffffff;
+}
+.navbar-brand{
+  color: #ffffff;
+}
+h1{
+  color:#0066ff;
+}
+h5{
+  font-weight:bold;
+  color: #0066ff;
+}
+img.animated-gif{
+  width: 50px;
+  height: auto;
+}
