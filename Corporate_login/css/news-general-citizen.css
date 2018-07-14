@@ -1,0 +1,29 @@
+.news-widget ul li.news-green .news-head {
+    background-color: #35be7a;
+    white-space: normal;
+    line-height: normal;
+}
+
+.news-widget ul li.news-green .news-head {
+    font-size: 18px;
+    width: 95%;
+}
+.news-widget ul li .news-head {
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    width: 269px;
+    padding: 14px;
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-weight: bold;
+    margin: 0;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -25px;
+    left: -17px;
+}
