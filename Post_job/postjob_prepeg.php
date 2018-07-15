@@ -27,8 +27,8 @@ if($_SERVER["REQUEST_METHOD"] =='POST')
 		echo "entered";
 	 //  $row=mysqli_fetch_assoc($result);
 
-$stmt = $conn->prepare("INSERT INTO `job_detail` (`jobid`, `jobname`, `jobdesc`, `jobsec`, `disabilitydesc`) VALUES (NULL, ?, ?, ?, ?);");// CHNAGED TABLE NAME to corporate-details
-    $stmt->bind_param("ssss",$jobname,$jobdesc,$jobsec,$disabilitydesc);// CHANGED DATABASE KEY VALUES HERE
+$stmt = $conn->prepare("INSERT INTO `job_detail` (`jobid`, `jobname`, `jobdesc`, `jobsec`, `disabilitydesc`,`cutoff`) VALUES (NULL, ?, ?, ?, ?,?);");// CHNAGED TABLE NAME to corporate-details
+    $stmt->bind_param("ssssi",$jobname,$jobdesc,$jobsec,$disabilitydesc,$cutoff);// CHANGED DATABASE KEY VALUES HERE
     
     // set parameters and execute
     //CHANGED THESE TO BIND
@@ -38,13 +38,14 @@ $stmt = $conn->prepare("INSERT INTO `job_detail` (`jobid`, `jobname`, `jobdesc`,
     //$cph=$_POST['phno']; // REMOVED PHONE NUMBER
     $jobsec=$_POST['jobsec'];
     $disabilitydesc = $_POST['disabilitydesc'];
+    $cutoff= $_POST['cutoff'];
    
     $stmt->execute();
     
     echo $conn->error;
     $stmt->close();
     $_SESSION[]="registered successfully";
-    header("location:postjob_ulb_signup.php"); // college_ulblogin.php changed to 
+   header("location:postjob_ulb_signup.php"); // college_ulblogin.php changed to 
        
 	} 
 
