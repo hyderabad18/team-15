@@ -186,9 +186,9 @@
                 </ul>
               </div>
               <div class="menu_section">
-                <h3>Live On</h3>
+                <h3>Post Training</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
+                  <li><a><div onclick='hide1()'><i class="fa fa-bug"></i>Job Oppurtunities<span class="fa fa-chevron-down"></span></div></a>
                     <ul class="nav child_menu">
                       <li><a href="e_commerce.html">E-commerce</a></li>
                       <li><a href="projects.html">Projects</a></li>
@@ -257,7 +257,7 @@
 			<div id="container"></div>
 			<div id="container2" hidden ><iframe height="800px" width="900px" frameborder=0  src = "http://www.youth4jobs.org/"></iframe></div>
 			<div id="container3" hidden ><iframe height="800px" width="900px" frameborder=0  src = "practiceTest1.html"></iframe></div>
-			 
+			 <div id="container4" hidden ><iframe height="800px" width="900px" frameborder=0  src = "practiceTest1.html"></iframe></div>
 		</div>
 		</div>
          
@@ -336,6 +336,7 @@ document.getElementById('container3').innerHTML = '<object type="text/html" data
 
 }
 
+
 function hide() {
     var x = document.getElementById("container2");
     if (x.style.display === "none") {
@@ -350,6 +351,14 @@ function hide1() {
         y.style.display = "block";
     } else {
         y.style.display = "none";
+    }
+}
+function hide2() {
+    var z = document.getElementById("container4");
+    if (z.style.display === "none") {
+        z.style.display = "block";
+    } else {
+        z.style.display = "none";
     }
 }
 </script>
