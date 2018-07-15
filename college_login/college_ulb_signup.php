@@ -73,6 +73,10 @@ session_start();
                   <!--<label for="Password1" class="text-uppercase" >Password</label>-->
                   <input type="text" class="form-control" placeholder="Phno" name="phno" required>
                 </div>
+				<div class="form-group">
+                  <!--<label for="Password1" class="text-uppercase" >Password</label>-->
+                  <input type="text" class="form-control" placeholder="Number of physically challeneged students in your college" name="count" required>
+                </div>
 
                            
                 

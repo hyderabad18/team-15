@@ -65,6 +65,7 @@
 			// $conn=getConnection();
 			// loginstatus($ulb_dao->getUid($user),$conn);
 			echo "success";
+			header("location:../university/");
 		}
 		else{
 			$_SESSION['error']="invalid email or password";

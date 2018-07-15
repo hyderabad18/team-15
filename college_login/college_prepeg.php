@@ -27,8 +27,8 @@ if($_SERVER["REQUEST_METHOD"] =='POST')
 		echo "enterd";
 	 //  $row=mysqli_fetch_assoc($result);
 
-$stmt = $conn->prepare("INSERT INTO college_details VALUES (?,?,?,?,?,?)");
-    $stmt->bind_param("ssssss",$cname,$cid,$cemail,$caddr, $cph,$cpass);
+$stmt = $conn->prepare("INSERT INTO college_details VALUES (?,?,?,?,?,?,?)");
+    $stmt->bind_param("ssssss",$cname,$cid,$cemail,$caddr, $cph,$cpass,$cd);
     
     // set parameters and execute
     $cname = $_POST['collegename'];
@@ -37,6 +37,7 @@ $stmt = $conn->prepare("INSERT INTO college_details VALUES (?,?,?,?,?,?)");
     $cph=$_POST['phno'];
     $caddr=$_POST['collegeaddress'];
     $cpass = $_POST['collegepassword'];
+	$cd=$_POST['count'];
    
     $stmt->execute();
     
