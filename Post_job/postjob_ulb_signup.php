@@ -30,7 +30,7 @@ session_start();
       <center>
       <div class="row">
         <div class="col-md-4 login-sec">
-            <h2 class="text-center">Post Jobs</h2>
+            <h2 class="text-center">Post Job</h2>
             <center><small>*are mandatory</small></center>
             <br/>
             <form class="login-form" action="postjob_prepeg.php" method="POST">
@@ -61,6 +61,10 @@ session_start();
                   <input type="text" class="form-control" placeholder="Job for particular Gifted Ability*" name="disabilitydesc" required>
                 </div>
 				 
+                <div class="form-group">
+                  <!--<label for="Password1" class="text-uppercase" >Password</label>-->
+                  <input type="text" class="form-control" placeholder="Cut off %*" name="cutoff" required>
+                </div>
                            
                 
                 <div class="form-check">
