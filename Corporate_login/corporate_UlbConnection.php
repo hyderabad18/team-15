@@ -16,7 +16,7 @@
 		}
 		function authenticateUlb($ulb_user,$password){
 			$con=$this->getConnection();
-			$query="select * from `corporate_detail` where `corpmail`=? and `corppassword`=?";
+			$query="select * from `corporate_detail` where `corpemail`=? and `corppass`=?";
 			
 			if($stmt=$con->prepare($query)){
 				echo "success";

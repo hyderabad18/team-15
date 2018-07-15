@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] =='POST')
 		echo "entered";
 	 //  $row=mysqli_fetch_assoc($result);
 
-$stmt = $conn->prepare("INSERT INTO `corporate_detail` (`corpid`, `corpname`, `corpmail`, `corpaddress`, `corppassword`) VALUES (NULL, ?, ?, ?, ?);");// CHNAGED TABLE NAME to corporate-details
+$stmt = $conn->prepare("INSERT INTO `corporate_detail` (`corpid`, `corpname`, `corpemail`, `corpaddr`, `corppass`) VALUES (NULL, ?, ?, ?, ?);");// CHNAGED TABLE NAME to corporate-details
     $stmt->bind_param("ssss",$corpname,$corpemail,$corpaddr,$corppass);// CHANGED DATABASE KEY VALUES HERE
     
     // set parameters and execute

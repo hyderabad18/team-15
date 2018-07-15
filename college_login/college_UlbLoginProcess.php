@@ -64,6 +64,10 @@
 			// $conn=getConnection();
 			// loginstatus($ulb_dao->getUid($user),$conn);
 			echo "success";
+			//$sql="SELECT countOfDisable from college_details where email='$email'";
+			//$con->query($sql);
+			//$_SESSION['collname']=
+			header("location:../university/search.php");
 		}
 		else{
 			$_SESSION['error']="invalid email or password";

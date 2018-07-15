@@ -1,9 +1,64 @@
 <?
 mysql_connect("localhost");
-mysql_select_db("test") or die("database could not connect ");
+mysql_select_db("youthseva") or die("database could not connect ");
 ?>
 <html>
 <head>
-<meta name="description"content="Php Code for View, Search,Edit and Delete Record" /><meta http-equiv="Content-Type"content="text/html; charset=iso-8859-1" /><title>Add Student Record</title></head><body><center><h1><u>Student Database</u></h1></center><?if($_POST["do"]=="store"){$roll=$_POST["roll"];$class=$_POST["class"];$name=$_POST["name"];$fname=$_POST["fname"];$sex=$_POST["sex"];$addr1=$_POST["addr1"];$addr2=$_POST["addr2"];$addr3=$_POST["addr3"];$city=$_POST["city"];$phone=$_POST["phone"];$email=$_POST["email"];$remarks=$_POST["remarks"];$query="insert into studentvalue($roll,'$class','$name','$fname','$sex','$addr1','$addr2','$addr3','$city','$phone','$email','$remarks')";mysql_query($query);echo "<center>Successfully store in DATABASE</center>";}?><form name="add" method="post" action="add.php"><table style=" border:1px solid silver" cellpadding="5px" cellspacing="0px"align="center" border="0"><tr><td colspan="4" style="background:#0066FF; color:#FFFFFF; font-size:20px">ADD STUDENT RECORD</td></tr><tr>
-<tr><td>Enter Roll Number</td><td><input type="text" name="roll" size="20"></td><td>Enter Class</td><td><input type="text" name="class" size="20"></td></tr><tr><td>Enter Name of Student</td><td><input type="text" name="name" size="20"></td><td>Enter Father's Name</td><td><input type="text" name="fname" size="20"></td></tr><tr><td>Sex</td><td><input type="radio" name="sex" value="Male">Male<input type="radio" name="sex" value="Female">Female </td><td>Address1</td><td><input type="text" name="addr1" size="20"></td></tr><tr><td>Address2</td><td><input type="text" name="addr2" size="20"></td><td>Address3</td><td><input type="text" name="addr3" size="20"></td></tr><tr><td>City</td><td><input type="text" name="city" size="20"></td><td>Phone</td><td><input type="text" name="phone" size="20"></td></tr><tr><td>Email</td><td><input type="text" name="email" size="20"></td><td>Remarks</td><td><input type="text" name="remarks" size="20"></td></tr><tr><td colspan="4" align="center"><input type="hidden" name="do" value="store"><input type="submit" value="ADD RECORD"></td></tr></table></form><p align="center"><a href="index.php">Go Back to Home</a></p><?include("search.php");?></body></html>
+<meta name="description"content="Php Code for View, Search,Edit and Delete Record" />
+<meta http-equiv="Content-Type"content="text/html; charset=iso-8859-1" />
+<meta charset="UTF-8"
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<title>Add Student Record</title>
+</head>
+<body>
+<center>
+<h1><u>Student Database</u></h1>
+</center>
+<?if(isset($_POST["submit"])){$name=$_POST["name"];$rno=$_POST["rollno"];$email=$_POST["email"];$disability=$_POST["disability"];$query="insert into studentvalue('$name','$rno','$email','$disability') values('name','rollno','email','disability')";if(mysql_query($query)){echo "";}}?>
+<form name="add" method="post" action="add.php">
+
+	<form name="add" method="post" action="add.php">
+	<table class="table">
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" placeholder="Enter student name" required>
+			
+		</tr>
+		<tr>
+			<td>Roll No</td>
+			<td><input type="text" name="rollno" placeholder="Enter Roll Number" required>
+			
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="email" name="email" placeholder="Enter email of student" required>
+			
+		</tr>
+		<tr>
+			<td>Disability</td>
+			<td><input type="text" name="disability" placeholder="Enter the disability " required>
+			
+		</tr>
+		<tr>
+			
+			<td><input type="submit" value="submit"  required>
+			
+		</tr>
+	</table>
+</form>
+<p align="center"><a href="index.php">Go Back to Home</a></p>
+
+</body>
+</html>
 

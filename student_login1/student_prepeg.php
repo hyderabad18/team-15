@@ -30,6 +30,8 @@ if($_SERVER["REQUEST_METHOD"] =='POST')
 $stmt = $conn->prepare("INSERT INTO user VALUES (?,?,?,?,?,?,?,?)");
     $stmt->bind_param("ssssssss",$sname,$cpass,$college,$caddr,$cph,$cdis,$email,$cbpo);
     
+$result = $conn->query($sql);
+
     // set parameters and execute
     $sname=$_POST['name'];
 	$email=$_POST['email'];
@@ -46,8 +48,12 @@ $stmt = $conn->prepare("INSERT INTO user VALUES (?,?,?,?,?,?,?,?)");
     
     echo $conn->error;
     $stmt->close();
+	$sql = "SELECT id FROM users where username='$name';
+	$result=$con->query($sql);
+	$row=$result->fetch_assoc();
+	$_SESSION['id']=$row['id'];
     $_SESSION[]="registered successfully";
-    header("location:index1.php");
+    header("location:../quizFolder/diagnosticTest.html");
     //  echo "executed"; 
 	} 
 
