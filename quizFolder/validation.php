@@ -33,7 +33,22 @@ if($val=="correct3")
 
 }
  }
- echo "$count";
+ $per=($count*4)/100";
+echo "<html>
+<body>
+
+<h1>your percentage for this test is $per</h1>
+</body>
+</html>";
+$id=$_SESSION['id'];
+$sql = "INSERT INTO testres(id,percentage)
+VALUES ($id,$per)";
+
+if ($conn->query($sql) === TRUE) {
+    
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 }
 
  ?>
