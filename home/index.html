@@ -1346,8 +1346,16 @@ document.getElementById('container2').innerHTML = '<object type="text/html" data
 
 
 }
+unction show_test_menu(){
+console.log('Inside home');
 
-function hide() {
+
+document.getElementById('container3').innerHTML = '<object type="text/html" data="practiceTest1.html" ></object>';
+
+
+}
+
+function hide() {                                      
     var x = document.getElementById("container2");
     if (x.style.display === "none") {
         x.style.display = "block";
