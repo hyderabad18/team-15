@@ -1,0 +1,42 @@
+
+.home-block{
+  background: #DE6262; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFB88C, #DE6262);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  float:left;
+  width:100%;
+  padding: 0px 50px 0px 50px;
+}
+
+
+.bg-1 { 
+      background-color: navajowhite;   /* Cream */
+      color: #000000;
+      /*opacity: 0.2;*/
+}
+
+.bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+}
+.bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+}
+.bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+}
+
+.margin { margin-top: 20px;}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.container-fluid{
+  padding-top: 20px;
+  padding-bottom:25px;
+}
